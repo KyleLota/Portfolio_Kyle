@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --accent: #3b6df0;
+  --accent-2: #6f8efb;
+  --muted: #6b6b7a;
+  --card-bg: rgba(255, 255, 255, 0.92);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #eaf3ff 0%, #d3e6ff 50%, #c0d7ff 100%);
+  color: #122;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  margin: 0 0 10px;
+}
+
+.hero-text span {
+  color: #ffe98a;
+}
+
+.hero-sub {
+  margin: 0 0 18px;
+  opacity: 0.95;
+}
+
+.social-row {
+  display: flex;
+  gap: 12px;
+}
+
+.social {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.social:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-photo {
+  flex: 0 0 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  object-position: 50% 20%; /* show more of face */
+  border-radius: 18px;
+  border: 6px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 30px rgba(16, 34, 91, 0.25);
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.section h2 {
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+/* ABOUT */
+.about-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(16, 34, 91, 0.06);
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* EDUCATION */
+.timeline {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.edu-item {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 14px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(16, 34, 91, 0.06);
+  transition: transform 0.25s ease;
+}
+
+.edu-item:hover {
+  transform: translateY(-6px);
+}
+
+.edu-logo {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* SKILLS */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-bg);
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(16, 34, 91, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon img {
+  width: 36px;
+  height: 36px;
+}
+
+.skill-label {
+  font-weight: 600;
+  color: #163;
+}
+
+/* CONTACT */
+.contact-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(16, 34, 91, 0.06);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: white;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px);
+  opacity: 0.9;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  color: white;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-photo {
+    order: -1;
+  }
+  .profile {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #122;
+}
+
+.main-social {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.main-social .social i {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 900px) {
+  .main-social {
+    justify-content: center;
+  }
+}
+
